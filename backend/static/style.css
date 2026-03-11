@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f7fb;
+}
+
+header {
+    background: #1a1f36;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 40%;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px;
+    background: #1a73e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Hover */
+.btn:hover {
+    background: #1558b0;
+}
+
+/* Remove default focus/active highlight */
+.btn:focus,
+.btn:active {
+    background: #1a73e8;
+    outline: none;
+}
+
+
+.hidden {
+    display: none;
+    color: green;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Cyber background */
+.cyber-bg {
+    background: url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b") no-repeat center center/cover;
+    position: relative;
+    height: 100vh;
+}
+
+/* Dark overlay for readability */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 20, 0.6);
+    backdrop-filter: blur(1px);
+}
+
+/* Hero text styling */
+.hero {
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+    z-index: 2;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #00eaff;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px #00ffffaa;
+}
+
+.subtitle {
+    color: #ffffffcc;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Center Card */
+.center-card {
+    position: relative;
+    width: 40%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    margin-top: 50px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+.center-card h2 {
+    color: #00eaff;
+}
+
+.center-card p {
+    line-height: 1.5;
+}
+
+/* Bigger button */
+.large-btn {
+    padding: 15px 18px;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/* Admin Login Box */
+.login-container {
+    width: 28%;
+    background: rgba(255,255,255,0.08);
+    margin: auto;
+    margin-top: 120px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0,255,255,0.4);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #00eaff;
+}
+
+.error {
+    color: tomato;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Dashboard Header */
+.admin-header {
+    background: #0a0f1f;
+    padding: 15px 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout-btn {
+    color: white;
+    background: #e63946;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.dashboard-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    color: white;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.report-table th, .report-table td {
+    border: 1px solid #00eaff66;
+    padding: 10px;
+    text-align: center;
+}
+
+.report-table th {
+    background: #00eaff22;
+}
+
+.dashboard-bg {
+    background: #0f1626;
+    min-height: 100vh;
+    color: white;
+}

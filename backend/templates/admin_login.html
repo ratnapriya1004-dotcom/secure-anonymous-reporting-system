@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Secure Reporting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="cyber-bg">
+    <div class="overlay"></div>
+
+    <div class="login-container">
+        <h2>Admin Login</h2>
+
+        <form method="POST" action="/admin/login">
+
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter Username" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter Password" required>
+
+            <button type="submit" class="btn large-btn">Login</button>
+
+        </form>
+
+
+        <p id="loginMsg" class="hidden error">Invalid login credentials.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

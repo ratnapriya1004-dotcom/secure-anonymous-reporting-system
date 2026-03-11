@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Anonymous Cyber Incident Report</h1>
+    </header>
+
+    <div class="container">
+        <form method="POST" action="/report" enctype="multipart/form-data">
+
+            <label>Category of Incident</label>
+            <select name="report_type" required>
+                <option value="">Select</option>
+                <option>Cyber Bullying</option>
+                <option>Financial Fraud</option>
+                <option>Hacking / Unauthorized Access</option>
+                <option>Online Abuse</option>
+                <option>Other</option>
+            </select>
+
+            <label>Describe the Incident</label>
+            <textarea name="description" rows="5" required placeholder="Explain what happened..."></textarea>
+
+            <label>Upload Evidence (Optional)</label>
+            <input type="file" name="evidence" accept=".png,.jpg,.jpeg,.pdf">
+
+
+            <button type="submit" class="btn">Submit Report</button>
+        </form>
+
+
+        {% if success %}
+        <p class="success">Your report has been submitted anonymously.</p>
+        {% endif %}
+
+    </div>
+
+    <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+</body>
+</html>

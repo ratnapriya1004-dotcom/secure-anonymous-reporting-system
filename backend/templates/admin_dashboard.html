@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Reports</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="dashboard-bg">
+
+    <header class="admin-header">
+        <h2>Admin Dashboard</h2>
+        <a href="{{ url_for('admin_logout') }}" class="logout-btn">Logout</a>
+
+    </header>
+
+    <div class="dashboard-container">
+        <h3>All Submitted Reports</h3>
+
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>Report ID</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>View</th>
+                </tr>
+            </thead>
+
+            <tbody id="reportTableBody">
+            {% for report in reports %}
+            <tr>
+                <td>{{ report.id }}</td>
+                <td>{{ report.report_type }}</td>
+                <td>{{ report.submitted_at }}</td>
+                <td>{{ report.status }}</td>
+                <td>
+                <a href="{{ url_for('view_report', report_id=report.id) }}" class="btn">
+                    Open
+                </a>
+                </td>
+
+            </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="dashboard-bg">
+
+    <header class="admin-header">
+        <h2>Report Details</h2>
+        <a href="{{ url_for('admin_dashboard') }}" class="logout-btn">Back</a>
+    </header>
+
+    <div class="dashboard-container">
+        <h3>Report ID: {{ report.id }}</h3>
+
+        <p><strong>Category:</strong> {{ report.report_type }}</p>
+        <p><strong>Date Submitted:</strong> {{ report.submitted_at }}</p>
+        <p><strong>Status:</strong> Pending</p>
+
+        
+        <h4>Description</h4>
+        <p>
+        {{ report.description }}
+        </p>
+
+        <h4>Evidence</h4>
+        {% if report.evidence_file %}
+        <a href="/uploads/{{ report.evidence_file }}" target="_blank">View Evidence</a>
+        {% else %}
+        <p>No file uploaded</p>
+        {% endif %}
+
+        <a href="/admin/report/update/{{ report.id }}" class="btn large-btn">
+            Mark as Resolved
+        </a>
+
+    </div>
+
+</body>
+</html>
