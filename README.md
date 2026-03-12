@@ -21,21 +21,19 @@ Administrators can securely review and manage submitted reports.
 
 ## Project Structure
 
-secure-anonymous-reporting-system/
-│
-├── backend/
-│ ├── app.py
-│ ├── templates/
-│ │ ├── index.html
-│ │ ├── report.html
-│ │ ├── admin_login.html
-│ │ ├── admin_dashboard.html
-│ │ └── admin_view_report.html
-│ │
-│ └── static/
-│ ├── style.css
-│ ├── script.js
-│ └── uploads/
+1. **secure-anonymous-reporting-system**
+2. **backend**
+3. `app.py` – Main Flask application file
+4. **templates**
+5. `index.html` – Home page
+6. `report.html` – Report submission page
+7. `admin_login.html` – Admin login page
+8. `admin_dashboard.html` – Admin dashboard
+9. `admin_view_report.html` – Page to view submitted reports
+10. **static**
+11. `style.css` – Styling for the website
+12. `script.js` – JavaScript functionality
+13. **uploads** – Folder used to store uploaded evidence files
 
 ## How to Run the Project
 
