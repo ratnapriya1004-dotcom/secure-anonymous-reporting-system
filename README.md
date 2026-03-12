@@ -21,22 +21,21 @@ Administrators can securely review and manage submitted reports.
 
 ## Project Structure
 
-secure-anonymous-reporting-system
+secure-anonymous-reporting-system/
 │
-└── backend
-    ├── app.py
-    ├── templates
-    │   ├── index.html
-    │   ├── report.html
-    │   ├── admin_login.html
-    │   ├── admin_dashboard.html
-    │   └── admin_view_report.html
-    │
-    ├── static
-    │   ├── style.css
-    │   └── script.js
-    │
-    └── uploads
+├── backend/
+│ ├── app.py
+│ ├── templates/
+│ │ ├── index.html
+│ │ ├── report.html
+│ │ ├── admin_login.html
+│ │ ├── admin_dashboard.html
+│ │ └── admin_view_report.html
+│ │
+│ └── static/
+│ ├── style.css
+│ ├── script.js
+│ └── uploads/
 
 ## How to Run the Project
 
